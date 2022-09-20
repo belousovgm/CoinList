@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9A40B09B28D9F26500C9BDC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B09A28D9F26500C9BDC8 /* AppDelegate.swift */; };
-		9A40B09D28D9F26500C9BDC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B09C28D9F26500C9BDC8 /* SceneDelegate.swift */; };
-		9A40B09F28D9F26500C9BDC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B09E28D9F26500C9BDC8 /* ViewController.swift */; };
-		9A40B0A228D9F26500C9BDC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A40B0A028D9F26500C9BDC8 /* Main.storyboard */; };
 		9A40B0A428D9F26600C9BDC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A40B0A328D9F26600C9BDC8 /* Assets.xcassets */; };
 		9A40B0A728D9F26600C9BDC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A40B0A528D9F26600C9BDC8 /* LaunchScreen.storyboard */; };
 		9A40B0B228D9F26600C9BDC8 /* Coin_ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B0B128D9F26600C9BDC8 /* Coin_ListTests.swift */; };
@@ -38,9 +35,6 @@
 /* Begin PBXFileReference section */
 		9A40B09728D9F26500C9BDC8 /* Coin List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coin List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A40B09A28D9F26500C9BDC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9A40B09C28D9F26500C9BDC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9A40B09E28D9F26500C9BDC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9A40B0A128D9F26500C9BDC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A40B0A328D9F26600C9BDC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A40B0A628D9F26600C9BDC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A40B0A828D9F26600C9BDC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,10 +93,8 @@
 		9A40B09928D9F26500C9BDC8 /* Coin List */ = {
 			isa = PBXGroup;
 			children = (
+				9A40B0CA28D9F62400C9BDC8 /* Presenation */,
 				9A40B09A28D9F26500C9BDC8 /* AppDelegate.swift */,
-				9A40B09C28D9F26500C9BDC8 /* SceneDelegate.swift */,
-				9A40B09E28D9F26500C9BDC8 /* ViewController.swift */,
-				9A40B0A028D9F26500C9BDC8 /* Main.storyboard */,
 				9A40B0A328D9F26600C9BDC8 /* Assets.xcassets */,
 				9A40B0A528D9F26600C9BDC8 /* LaunchScreen.storyboard */,
 				9A40B0A828D9F26600C9BDC8 /* Info.plist */,
@@ -125,6 +117,13 @@
 				9A40B0BD28D9F26600C9BDC8 /* Coin_ListUITestsLaunchTests.swift */,
 			);
 			path = "Coin ListUITests";
+			sourceTree = "<group>";
+		};
+		9A40B0CA28D9F62400C9BDC8 /* Presenation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +232,6 @@
 			files = (
 				9A40B0A728D9F26600C9BDC8 /* LaunchScreen.storyboard in Resources */,
 				9A40B0A428D9F26600C9BDC8 /* Assets.xcassets in Resources */,
-				9A40B0A228D9F26500C9BDC8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A40B09F28D9F26500C9BDC8 /* ViewController.swift in Sources */,
 				9A40B09B28D9F26500C9BDC8 /* AppDelegate.swift in Sources */,
-				9A40B09D28D9F26500C9BDC8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +293,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9A40B0A028D9F26500C9BDC8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9A40B0A128D9F26500C9BDC8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9A40B0A528D9F26600C9BDC8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +430,7 @@
 				INFOPLIST_FILE = "Coin List/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +458,7 @@
 				INFOPLIST_FILE = "Coin List/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
