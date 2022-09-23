@@ -11,6 +11,7 @@
 		801CFB412A464ADD2BE90090 /* Pods_Coin_ListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF5880A7375688B48CB3305 /* Pods_Coin_ListTests.framework */; };
 		9A058DB928DDF8360073A714 /* CoinStatResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A058DB828DDF8360073A714 /* CoinStatResponse.swift */; };
 		9A058DBB28DDFA260073A714 /* CoinStatsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A058DBA28DDFA260073A714 /* CoinStatsApi.swift */; };
+		9A22A6EE28DE1F9D004B967F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A22A6ED28DE1F9D004B967F /* R.generated.swift */; };
 		9A40B09B28D9F26500C9BDC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B09A28D9F26500C9BDC8 /* AppDelegate.swift */; };
 		9A40B0A428D9F26600C9BDC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A40B0A328D9F26600C9BDC8 /* Assets.xcassets */; };
 		9A40B0A728D9F26600C9BDC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A40B0A528D9F26600C9BDC8 /* LaunchScreen.storyboard */; };
@@ -56,6 +57,7 @@
 		57DF310146168901DB7399C8 /* Pods_Coin_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coin_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A058DB828DDF8360073A714 /* CoinStatResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinStatResponse.swift; sourceTree = "<group>"; };
 		9A058DBA28DDFA260073A714 /* CoinStatsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinStatsApi.swift; sourceTree = "<group>"; };
+		9A22A6ED28DE1F9D004B967F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		9A40B09728D9F26500C9BDC8 /* CoinList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A40B09A28D9F26500C9BDC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A40B0A328D9F26600C9BDC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -170,9 +172,9 @@
 		9A40B08E28D9F26500C9BDC8 = {
 			isa = PBXGroup;
 			children = (
-				9A40B09928D9F26500C9BDC8 /* Coin List */,
-				9A40B0B028D9F26600C9BDC8 /* Coin ListTests */,
-				9A40B0BA28D9F26600C9BDC8 /* Coin ListUITests */,
+				9A40B09928D9F26500C9BDC8 /* CoinList */,
+				9A40B0B028D9F26600C9BDC8 /* CoinListTests */,
+				9A40B0BA28D9F26600C9BDC8 /* CoinListUITests */,
 				9A40B09828D9F26500C9BDC8 /* Products */,
 				21C9E3A2E3EF17F3B1D7C3C2 /* Pods */,
 				6673FC53370E5D5A286C127C /* Frameworks */,
@@ -189,7 +191,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9A40B09928D9F26500C9BDC8 /* Coin List */ = {
+		9A40B09928D9F26500C9BDC8 /* CoinList */ = {
 			isa = PBXGroup;
 			children = (
 				9AF520DC28DE150800E2C0A5 /* Resources */,
@@ -201,24 +203,24 @@
 				9A40B0A528D9F26600C9BDC8 /* LaunchScreen.storyboard */,
 				9A40B0A828D9F26600C9BDC8 /* Info.plist */,
 			);
-			path = "Coin List";
+			path = CoinList;
 			sourceTree = "<group>";
 		};
-		9A40B0B028D9F26600C9BDC8 /* Coin ListTests */ = {
+		9A40B0B028D9F26600C9BDC8 /* CoinListTests */ = {
 			isa = PBXGroup;
 			children = (
 				9A40B0B128D9F26600C9BDC8 /* Coin_ListTests.swift */,
 			);
-			path = "Coin ListTests";
+			path = CoinListTests;
 			sourceTree = "<group>";
 		};
-		9A40B0BA28D9F26600C9BDC8 /* Coin ListUITests */ = {
+		9A40B0BA28D9F26600C9BDC8 /* CoinListUITests */ = {
 			isa = PBXGroup;
 			children = (
 				9A40B0BB28D9F26600C9BDC8 /* Coin_ListUITests.swift */,
 				9A40B0BD28D9F26600C9BDC8 /* Coin_ListUITestsLaunchTests.swift */,
 			);
-			path = "Coin ListUITests";
+			path = CoinListUITests;
 			sourceTree = "<group>";
 		};
 		9A40B0CA28D9F62400C9BDC8 /* Presenation */ = {
@@ -303,6 +305,7 @@
 		9AF520DC28DE150800E2C0A5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9AF5212828DE1F1400E2C0A5 /* R.Swift */,
 				9AF520DD28DE151500E2C0A5 /* Fonts */,
 				9A40B0A328D9F26600C9BDC8 /* Assets.xcassets */,
 			);
@@ -323,6 +326,14 @@
 				9AF520E928DE1A0F00E2C0A5 /* RankLabel.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		9AF5212828DE1F1400E2C0A5 /* R.Swift */ = {
+			isa = PBXGroup;
+			children = (
+				9A22A6ED28DE1F9D004B967F /* R.generated.swift */,
+			);
+			path = R.Swift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -578,7 +589,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Coin List/Resources/R.Swift/R.generated.swift\"\n";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/CoinList/Resources/R.Swift/R.generated.swift\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -598,6 +609,7 @@
 				9A40B0D028D9F74300C9BDC8 /* CoinListViewController.swift in Sources */,
 				9A058DBB28DDFA260073A714 /* CoinStatsApi.swift in Sources */,
 				9AF520CE28DE0B3C00E2C0A5 /* CoinListApi.swift in Sources */,
+				9A22A6EE28DE1F9D004B967F /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,7 +783,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QVKQSTGJ53;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Coin List/Info.plist";
+				INFOPLIST_FILE = CoinList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -800,7 +812,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QVKQSTGJ53;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Coin List/Info.plist";
+				INFOPLIST_FILE = CoinList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

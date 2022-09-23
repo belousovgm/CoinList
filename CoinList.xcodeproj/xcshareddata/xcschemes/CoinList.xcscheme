@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9A40B09628D9F26500C9BDC8"
-               BuildableName = "Coin List.app"
+               BuildableName = "CoinList.app"
                BlueprintName = "CoinList"
                ReferencedContainer = "container:CoinList.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9A40B0AC28D9F26600C9BDC8"
-               BuildableName = "Coin ListTests.xctest"
+               BuildableName = "CoinListTests.xctest"
                BlueprintName = "CoinListTests"
                ReferencedContainer = "container:CoinList.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9A40B0B628D9F26600C9BDC8"
-               BuildableName = "Coin ListUITests.xctest"
+               BuildableName = "CoinListUITests.xctest"
                BlueprintName = "CoinListUITests"
                ReferencedContainer = "container:CoinList.xcodeproj">
             </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9A40B09628D9F26500C9BDC8"
-            BuildableName = "Coin List.app"
+            BuildableName = "CoinList.app"
             BlueprintName = "CoinList"
             ReferencedContainer = "container:CoinList.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9A40B09628D9F26500C9BDC8"
-            BuildableName = "Coin List.app"
+            BuildableName = "CoinList.app"
             BlueprintName = "CoinList"
             ReferencedContainer = "container:CoinList.xcodeproj">
          </BuildableReference>

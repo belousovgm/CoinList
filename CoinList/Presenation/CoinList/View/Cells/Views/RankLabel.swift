@@ -12,6 +12,6 @@ class RankLabel: UILabel {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-//        backgroundColor =
+        backgroundColor = R.color.rankLabelBackground()
     }
 }
