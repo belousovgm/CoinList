@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'Coin List' do
+target 'CoinList' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
@@ -9,14 +9,17 @@ target 'Coin List' do
   pod 'RxSwift'
   pod 'RxDataSources'
   pod 'RxAlamofire'
+  pod 'AlamofireImage'
   pod 'Swinject'
+  
+  pod 'Bagel'
 
-  target 'Coin ListTests' do
+  target 'CoinListTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'Coin ListUITests' do
+  target 'CoinListUITests' do
     # Pods for testing
   end
 

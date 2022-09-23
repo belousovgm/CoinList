@@ -3,9 +3,13 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro.ttf">
+            <string>SFPro-Semibold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PercentChangeView" customModule="CoinList" customModuleProvider="target">
             <connections>
@@ -25,16 +29,16 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="0.12%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQ6-Ie-QyV">
-                    <rect key="frame" x="14" y="4" width="46.5" height="26"/>
+                    <rect key="frame" x="14" y="4" width="42" height="26"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="26" id="hjr-sN-GDf"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="pQ6-Ie-QyV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="5Mx-cv-CrV"/>
                 <constraint firstAttribute="trailing" secondItem="pQ6-Ie-QyV" secondAttribute="trailing" priority="999" constant="4" id="7iU-eV-cUz"/>
@@ -48,8 +52,5 @@
     </objects>
     <resources>
         <image name="RateGrowthArrow" width="6" height="6"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

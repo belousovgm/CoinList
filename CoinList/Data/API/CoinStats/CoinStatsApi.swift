@@ -9,14 +9,14 @@ import Foundation
 import RxAlamofire
 import RxSwift
 
-class CoinStatsApi {
+class CoinStatsApi: CoinsApi {
     private let baseUrl = "https://api.coin-stats.com/v3"
     
-    func getCoinStats() -> Single<[CoinStatResponse]> {
+    func getCoins() -> Single<[Coin]> {
         RxAlamofire
             .requestDecodable(.get, baseUrl + "/coins")
-            .map { (_, decodable: [CoinStatResponse]) in
-                return decodable
+            .map { (_, coinsResponse: CoinsResponse) in
+                return coinsResponse.coins
             }.asSingle()
     }
 }

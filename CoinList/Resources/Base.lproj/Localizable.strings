@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  CoinList
+
+  Created by Grigory Belousov on 24.09.2022.
+  
+*/
+
+"CoinList.percentChange.text" = "%.2f%%";

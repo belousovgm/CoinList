@@ -8,6 +8,6 @@
 import Foundation
 import RxSwift
 
-protocol CoinListApi {
-    func getCoinStats() -> Single<[CoinStat]>
+protocol CoinsApi {
+    func getCoins() -> Single<[Coin]>
 }

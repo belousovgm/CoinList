@@ -1,5 +1,5 @@
 //
-//  CoinStats.swift
+//  CoinStat.swift
 //  Coin List
 //
 //  Created by Grigory Belousov on 23.09.2022.
@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct CoinStat {
+struct CoinStat: Equatable {
     let identifier: String
-    let rank: String
-    let usdPrice: Int
-    let btcPrice: Int
-    let usdDayVolume: Int
+    let rank: Int
+    let usdPrice: Double
+    let btcPrice: Double
+    let usdDayVolume: Double
     let name: String
     let symbol: String
     let iconUrl: String

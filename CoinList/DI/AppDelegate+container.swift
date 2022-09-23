@@ -9,13 +9,19 @@ import Foundation
 import Swinject
 
 let container = Container() { container in
-    container.register(CoinListApi.self) { _ in CoinStatsApi() }
+    container.register(CoinsApi.self) { _ in CoinStatsApi() }
     
     container.register(CoinListViewModel.self) { resolver in
-        CoinListViewModel(coinListApi: resolver.resolve(CoinListApi.self)!)
+        CoinListViewModel(coinListApi: resolver.resolve(CoinsApi.self)!)
     }
     
+    container.register(CoinListDataSource.self) { resolver in
+        return CoinListDataSourceProvider().dataSource
+    }
     container.register(CoinListViewController.self) { resolver in
-        return CoinListViewController(viewModel: resolver.resolve(CoinListViewModel.self)!)
+        return CoinListViewController(
+            viewModel: resolver.resolve(CoinListViewModel.self)!,
+            dataSource: resolver.resolve(CoinListDataSource.self)!
+        )
     }
 }

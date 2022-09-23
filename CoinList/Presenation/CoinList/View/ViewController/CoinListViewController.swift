@@ -6,13 +6,20 @@
 //
 
 import UIKit
+import RxSwift
+import RxDataSources
 
 class CoinListViewController: UIViewController {
-
-    private var viewModel: CoinListViewModel!
+    @IBOutlet private weak var tableView: UITableView!
     
-    init(viewModel: CoinListViewModel) {
+    private let viewModel: CoinListViewModel
+    private let dataSource: CoinListDataSource
+    
+    private let disposeBag = DisposeBag()
+    
+    init(viewModel: CoinListViewModel, dataSource: CoinListDataSource) {
         self.viewModel = viewModel
+        self.dataSource = dataSource
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -22,19 +29,24 @@ class CoinListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        tableView.register(UINib(nibName: CoinTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: CoinTableViewCell.identifier)
+        tableView.rx.setDelegate(self).disposed(by: disposeBag)
+        
+        viewModel
+            .coinListDriver
+            .asObservable()
+            .map({ coinsStat in
+                [AnimatableSectionModel(model: "", items: coinsStat)]
+            })
+            .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+        
     }
+}
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension CoinListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 57
     }
-    */
-
 }

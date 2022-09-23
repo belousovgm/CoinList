@@ -18,6 +18,16 @@ class NibView: UIView {
         return UINib(nibName: Self.nibName, bundle: bundle)
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupFromNib()
+    }
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupFromNib()
+    }
+    
     func setupFromNib() {
         guard let view = Self.nib.instantiate(withOwner: self, options: nil).first as? UIView else {
             fatalError("Error loading \(self) from nib")
@@ -33,5 +43,7 @@ class NibView: UIView {
             view.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: 0),
             view.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0)
         ])
+        
+        view.backgroundColor = .clear
     }
 }
