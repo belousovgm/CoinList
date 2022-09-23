@@ -12,6 +12,12 @@
 		9A058DB928DDF8360073A714 /* CoinStatResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A058DB828DDF8360073A714 /* CoinStatResponse.swift */; };
 		9A058DBB28DDFA260073A714 /* CoinStatsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A058DBA28DDFA260073A714 /* CoinStatsApi.swift */; };
 		9A22A6EE28DE1F9D004B967F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A22A6ED28DE1F9D004B967F /* R.generated.swift */; };
+		9A22A6F128DE2214004B967F /* RankLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A22A6F028DE2214004B967F /* RankLabelView.swift */; };
+		9A22A6F428DE222A004B967F /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A22A6F328DE222A004B967F /* NibView.swift */; };
+		9A22A6F628DE23BA004B967F /* RankLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A22A6F528DE23BA004B967F /* RankLabelView.xib */; };
+		9A22A6F928DE2ABB004B967F /* PercentChangeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A22A6F828DE2ABB004B967F /* PercentChangeView.xib */; };
+		9A22A6FB28DE2ACD004B967F /* PercentChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A22A6FA28DE2ACD004B967F /* PercentChangeView.swift */; };
+		9A22A6FE28DE3189004B967F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A22A70028DE3189004B967F /* Localizable.strings */; };
 		9A40B09B28D9F26500C9BDC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B09A28D9F26500C9BDC8 /* AppDelegate.swift */; };
 		9A40B0A428D9F26600C9BDC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A40B0A328D9F26600C9BDC8 /* Assets.xcassets */; };
 		9A40B0A728D9F26600C9BDC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A40B0A528D9F26600C9BDC8 /* LaunchScreen.storyboard */; };
@@ -28,7 +34,6 @@
 		9AF520DA28DE123A00E2C0A5 /* CoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF520D828DE123A00E2C0A5 /* CoinTableViewCell.swift */; };
 		9AF520DB28DE123A00E2C0A5 /* CoinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AF520D928DE123A00E2C0A5 /* CoinTableViewCell.xib */; };
 		9AF520E128DE15C500E2C0A5 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AF520E028DE15C500E2C0A5 /* SF-Pro.ttf */; };
-		9AF520EA28DE1A0F00E2C0A5 /* RankLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF520E928DE1A0F00E2C0A5 /* RankLabel.swift */; };
 		EB537C7FAE4198C71FB84D59 /* Pods_Coin_List_Coin_ListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B894824B0F91B957673B1B92 /* Pods_Coin_List_Coin_ListUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +63,12 @@
 		9A058DB828DDF8360073A714 /* CoinStatResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinStatResponse.swift; sourceTree = "<group>"; };
 		9A058DBA28DDFA260073A714 /* CoinStatsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinStatsApi.swift; sourceTree = "<group>"; };
 		9A22A6ED28DE1F9D004B967F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		9A22A6F028DE2214004B967F /* RankLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankLabelView.swift; sourceTree = "<group>"; };
+		9A22A6F328DE222A004B967F /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
+		9A22A6F528DE23BA004B967F /* RankLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankLabelView.xib; sourceTree = "<group>"; };
+		9A22A6F828DE2ABB004B967F /* PercentChangeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PercentChangeView.xib; sourceTree = "<group>"; };
+		9A22A6FA28DE2ACD004B967F /* PercentChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentChangeView.swift; sourceTree = "<group>"; };
+		9A22A6FF28DE3189004B967F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9A40B09728D9F26500C9BDC8 /* CoinList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A40B09A28D9F26500C9BDC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A40B0A328D9F26600C9BDC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,7 +89,6 @@
 		9AF520D828DE123A00E2C0A5 /* CoinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTableViewCell.swift; sourceTree = "<group>"; };
 		9AF520D928DE123A00E2C0A5 /* CoinTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinTableViewCell.xib; sourceTree = "<group>"; };
 		9AF520E028DE15C500E2C0A5 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
-		9AF520E928DE1A0F00E2C0A5 /* RankLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankLabel.swift; sourceTree = "<group>"; };
 		9DF5880A7375688B48CB3305 /* Pods_Coin_ListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coin_ListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B894824B0F91B957673B1B92 /* Pods_Coin_List_Coin_ListUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coin_List_Coin_ListUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8B9F4CB7762EE1E5ABD30A7 /* Pods-Coin List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coin List.debug.xcconfig"; path = "Target Support Files/Pods-Coin List/Pods-Coin List.debug.xcconfig"; sourceTree = "<group>"; };
@@ -169,6 +179,32 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		9A22A6EF28DE21DB004B967F /* RankLabelView */ = {
+			isa = PBXGroup;
+			children = (
+				9A22A6F028DE2214004B967F /* RankLabelView.swift */,
+				9A22A6F528DE23BA004B967F /* RankLabelView.xib */,
+			);
+			path = RankLabelView;
+			sourceTree = "<group>";
+		};
+		9A22A6F228DE221E004B967F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9A22A6F328DE222A004B967F /* NibView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9A22A6F728DE2A97004B967F /* PercentChangeView */ = {
+			isa = PBXGroup;
+			children = (
+				9A22A6F828DE2ABB004B967F /* PercentChangeView.xib */,
+				9A22A6FA28DE2ACD004B967F /* PercentChangeView.swift */,
+			);
+			path = PercentChangeView;
+			sourceTree = "<group>";
+		};
 		9A40B08E28D9F26500C9BDC8 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +230,7 @@
 		9A40B09928D9F26500C9BDC8 /* CoinList */ = {
 			isa = PBXGroup;
 			children = (
+				9A22A6F228DE221E004B967F /* Common */,
 				9AF520DC28DE150800E2C0A5 /* Resources */,
 				9AF520D128DE0E4400E2C0A5 /* Mappers */,
 				9AF520C628DE088700E2C0A5 /* DI */,
@@ -308,6 +345,7 @@
 				9AF5212828DE1F1400E2C0A5 /* R.Swift */,
 				9AF520DD28DE151500E2C0A5 /* Fonts */,
 				9A40B0A328D9F26600C9BDC8 /* Assets.xcassets */,
+				9A22A70028DE3189004B967F /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -323,7 +361,8 @@
 		9AF520E828DE19FA00E2C0A5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9AF520E928DE1A0F00E2C0A5 /* RankLabel.swift */,
+				9A22A6F728DE2A97004B967F /* PercentChangeView */,
+				9A22A6EF28DE21DB004B967F /* RankLabelView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -451,6 +490,9 @@
 				9A40B0A728D9F26600C9BDC8 /* LaunchScreen.storyboard in Resources */,
 				9AF520DB28DE123A00E2C0A5 /* CoinTableViewCell.xib in Resources */,
 				9A40B0A428D9F26600C9BDC8 /* Assets.xcassets in Resources */,
+				9A22A6FE28DE3189004B967F /* Localizable.strings in Resources */,
+				9A22A6F928DE2ABB004B967F /* PercentChangeView.xib in Resources */,
+				9A22A6F628DE23BA004B967F /* RankLabelView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,9 +642,11 @@
 			files = (
 				9AF520C828DE09B000E2C0A5 /* AppDelegate+container.swift in Sources */,
 				9AF520D328DE0E5800E2C0A5 /* CoinStatMapper.swift in Sources */,
+				9A22A6F128DE2214004B967F /* RankLabelView.swift in Sources */,
 				9A40B09B28D9F26500C9BDC8 /* AppDelegate.swift in Sources */,
+				9A22A6FB28DE2ACD004B967F /* PercentChangeView.swift in Sources */,
 				9AF520D028DE0C6600E2C0A5 /* CoinStats.swift in Sources */,
-				9AF520EA28DE1A0F00E2C0A5 /* RankLabel.swift in Sources */,
+				9A22A6F428DE222A004B967F /* NibView.swift in Sources */,
 				9AF520DA28DE123A00E2C0A5 /* CoinTableViewCell.swift in Sources */,
 				9A058DB928DDF8360073A714 /* CoinStatResponse.swift in Sources */,
 				9AF520CB28DE0AE400E2C0A5 /* CoinListViewModel.swift in Sources */,
@@ -646,6 +690,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		9A22A70028DE3189004B967F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A22A6FF28DE3189004B967F /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		9A40B0A528D9F26600C9BDC8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
