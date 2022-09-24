@@ -1,5 +1,5 @@
 //
-//  CoinStatsResponse.swift
+//  CoinResponse.swift
 //  Coin List
 //
 //  Created by Grigory Belousov on 23.09.2022.

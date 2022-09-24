@@ -19,4 +19,12 @@ class CoinStatsApi: CoinsApi {
                 return coinsResponse.coins
             }.asSingle()
     }
+    
+    func getCoinsUpdate() -> Single<[CoinUpdate]> {
+        RxAlamofire
+            .requestDecodable(.get, baseUrl + "/coins", parameters: ["responseType": "array"])
+            .map { (_, coinUpdatesResponse: CoinUpdatesResponse) in
+                return coinUpdatesResponse.coinUpdates
+            }.asSingle()
+    }
 }

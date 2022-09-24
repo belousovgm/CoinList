@@ -12,6 +12,7 @@ import RxCocoa
 class CoinListViewModel {
     private let disposeBag = DisposeBag()
     private let coinListSubject = PublishSubject<[CoinStat]>()
+    private let globalScheduler = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global())
     
     var coinListDriver: Driver<[CoinStat]> {
         return coinListSubject.asDriver(onErrorJustReturn: [])
@@ -25,33 +26,43 @@ class CoinListViewModel {
     }
     
     func load() {
-//        RxTimeInterval
+        let intervalUpdate = Observable<Int>
+            .interval(.seconds(5), scheduler: globalScheduler)
+            .flatMap { [unowned self] _ in
+                coinListApi.getCoinsUpdate().asObservable()
+            }
+        
         coinListApi
             .getCoins()
-            .map({ coins in
-                coins.map { $0.asCoinStats() }
-            })
-            .subscribe(onSuccess: coinListSubject.onNext)
+            .asObservable()
+            .observe(on: globalScheduler)
+            .flatMap { coins in
+                return Observable.combineLatest(
+                    Observable.just(coins),
+                    intervalUpdate.startWith([])
+                )
+            }.map { (coins, coinUpdates) -> [CoinStat] in
+                coins.map { coin in
+                    let coinUpdate = coinUpdates.first(where: { $0.identifier == coin.identifier })
+                    
+                    return CoinStat(
+                        identifier: coin.identifier,
+                        rank: coinUpdate?.rank ?? coin.rank,
+                        usdPrice: coinUpdate?.usdPrice ?? coin.usdPrice ?? 0,
+                        btcPrice: coinUpdate?.btcPrice ?? coin.btcPrice ?? 0,
+                        usdDayVolume: coinUpdate?.usdDayVolume ?? coin.usdDayVolume ?? 0,
+                        name: coin.name,
+                        symbol: coin.symbol,
+                        iconUrl: coin.iconUrl,
+                        marketCapUsd: coinUpdate?.marketCapUsd ?? coin.marketCapUsd ?? 0,
+                        hourPercentChange: coinUpdate?.hourPercentChange ?? coin.hourPercentChange ?? 0,
+                        dayPercentChange: coinUpdate?.dayPercentChange ?? coin.dayPercentChange ?? 0,
+                        weekPercentChange: coinUpdate?.weekPercentChange ?? coin.weekPercentChange ?? 0
+                    )
+                
+                }
+            }
+            .subscribe(onNext: coinListSubject.onNext)
             .disposed(by: disposeBag)
-    }
-}
-
-extension Coin {
-    func asCoinStats() -> CoinStat {
-        CoinStat(
-            identifier: identifier,
-            rank: rank,
-            usdPrice: usdPrice ?? 0,
-            btcPrice: btcPrice ?? 0,
-            usdDayVolume: usdDayVolume ?? 0,
-            name: name,
-            symbol: symbol,
-            iconUrl: iconUrl,
-            marketCapUsd: marketCapUsd ?? 0,
-            hourPercentChange: hourPercentChange ?? 0,
-            dayPercentChange: dayPercentChange ?? 0,
-            weekPercentChange: weekPercentChange ?? 0
-        )
-        
     }
 }

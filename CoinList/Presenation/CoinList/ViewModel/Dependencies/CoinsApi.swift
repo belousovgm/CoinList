@@ -10,4 +10,5 @@ import RxSwift
 
 protocol CoinsApi {
     func getCoins() -> Single<[Coin]>
+    func getCoinsUpdate() -> Single<[CoinUpdate]>
 }

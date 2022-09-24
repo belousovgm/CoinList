@@ -41,12 +41,15 @@ class CoinListViewController: UIViewController {
             })
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
-        
     }
 }
 
 extension CoinListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 57
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 57
     }
 }
