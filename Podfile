@@ -12,8 +12,6 @@ target 'CoinList' do
   pod 'AlamofireImage'
   pod 'Swinject'
   
-  pod 'Bagel'
-
   target 'CoinListTests' do
     inherit! :search_paths
     # Pods for testing

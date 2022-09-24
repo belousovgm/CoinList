@@ -18,6 +18,7 @@ let container = Container() { container in
     container.register(CoinListDataSource.self) { resolver in
         return CoinListDataSourceProvider().dataSource
     }
+    
     container.register(CoinListViewController.self) { resolver in
         return CoinListViewController(
             viewModel: resolver.resolve(CoinListViewModel.self)!,

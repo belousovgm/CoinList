@@ -25,6 +25,7 @@ class CoinListViewController: UIViewController {
     init(viewModel: CoinListViewModel, dataSource: CoinListDataSource) {
         self.viewModel = viewModel
         self.dataSource = dataSource
+        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -35,7 +36,10 @@ class CoinListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: CoinTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: CoinTableViewCell.identifier)
+        tableView.register(
+            UINib(nibName: CoinTableViewCell.identifier, bundle: nil),
+            forCellReuseIdentifier: CoinTableViewCell.identifier
+        )
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
         
         navigationBarView

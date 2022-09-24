@@ -11,19 +11,12 @@ import RxCocoa
 
 class CoinListViewModel {
     private let coinListSubject = PublishSubject<[CoinStat]>()
-    
     private let disposeBag = DisposeBag()
-    
     private let globalScheduler = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global())
-    
     private let coinListApi: CoinsApi
-    
-    // Input
-    
+
     let searchTextSubject = PublishSubject<String>()
-    
-    // Output
-    
+
     var coinListDriver: Driver<[CoinStat]> {
         return coinListSubject.asDriver(onErrorJustReturn: [])
     }
@@ -33,7 +26,7 @@ class CoinListViewModel {
         load()
     }
     
-    func load() {
+    private func load() {
         let intervalUpdate = Observable<Int>
             .interval(.seconds(5), scheduler: globalScheduler)
             .flatMap { [unowned self] _ in
