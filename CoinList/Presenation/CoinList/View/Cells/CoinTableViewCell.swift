@@ -42,15 +42,6 @@ class CoinTableViewCell: UITableViewCell {
         if let url = URL(string: data.iconUrl) {
             iconImageView.af.setImage(
                 withURL: url
-                //            cacheKey: <#T##String?#>,
-                //            placeholderImage: <#T##UIImage?#>,
-                //            serializer: <#T##ImageResponseSerializer?#>,
-                //            filter: <#T##ImageFilter?#>,
-                //            progress: <#T##ImageDownloader.ProgressHandler?##ImageDownloader.ProgressHandler?##(Progress) -> Void#>,
-                //            progressQueue: <#T##DispatchQueue#>,
-                //            imageTransition: <#T##UIImageView.ImageTransition#>,
-                //            runImageTransitionIfCached: <#T##Bool#>,
-                //            completion: <#T##((AFIDataResponse<UIImage>) -> Void)?##((AFIDataResponse<UIImage>) -> Void)?##(AFIDataResponse<UIImage>) -> Void#>
             )
         }
     }
