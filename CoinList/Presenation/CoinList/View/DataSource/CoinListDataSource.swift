@@ -8,7 +8,7 @@
 import Foundation
 import RxDataSources
 
-typealias CoinListDataSource = RxTableViewSectionedAnimatedDataSource<AnimatableSectionModel<String, CoinStat>>
+typealias CoinListDataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, CoinStat>>
 struct CoinListDataSourceProvider {
     let dataSource = CoinListDataSource(configureCell: { _, tableView, indexPath, coinStat in
         let cell = tableView.dequeueReusableCell(withIdentifier: CoinTableViewCell.identifier, for: indexPath) as! CoinTableViewCell

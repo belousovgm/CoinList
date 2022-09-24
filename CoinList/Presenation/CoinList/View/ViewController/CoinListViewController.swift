@@ -37,7 +37,7 @@ class CoinListViewController: UIViewController {
             .coinListDriver
             .asObservable()
             .map({ coinsStat in
-                [AnimatableSectionModel(model: "", items: coinsStat)]
+                [SectionModel(model: "", items: coinsStat)]
             })
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)

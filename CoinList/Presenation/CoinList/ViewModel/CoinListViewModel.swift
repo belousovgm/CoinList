@@ -35,13 +35,14 @@ class CoinListViewModel {
         coinListApi
             .getCoins()
             .asObservable()
-            .observe(on: globalScheduler)
             .flatMap { coins in
                 return Observable.combineLatest(
                     Observable.just(coins),
                     intervalUpdate.startWith([])
                 )
-            }.map { (coins, coinUpdates) -> [CoinStat] in
+            }
+            .observe(on: globalScheduler)
+            .map { (coins, coinUpdates) -> [CoinStat] in
                 coins.map { coin in
                     let coinUpdate = coinUpdates.first(where: { $0.identifier == coin.identifier })
                     
@@ -59,7 +60,6 @@ class CoinListViewModel {
                         dayPercentChange: coinUpdate?.dayPercentChange ?? coin.dayPercentChange ?? 0,
                         weekPercentChange: coinUpdate?.weekPercentChange ?? coin.weekPercentChange ?? 0
                     )
-                
                 }
             }
             .subscribe(onNext: coinListSubject.onNext)
