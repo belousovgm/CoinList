@@ -73,6 +73,7 @@
                         <constraint firstAttribute="width" constant="300" id="G01-9O-N25"/>
                         <constraint firstAttribute="height" constant="44" id="NPw-lz-1xe"/>
                     </constraints>
+                    <color key="barTintColor" systemColor="systemBackgroundColor"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
             </subviews>

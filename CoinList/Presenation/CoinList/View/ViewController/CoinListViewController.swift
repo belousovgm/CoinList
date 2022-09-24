@@ -41,6 +41,7 @@ class CoinListViewController: UIViewController {
             forCellReuseIdentifier: CoinTableViewCell.identifier
         )
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
+        tableView.keyboardDismissMode = .onDrag
         
         navigationBarView
             .searchText
