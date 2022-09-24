@@ -11,6 +11,11 @@ import RxDataSources
 
 class CoinListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var navigationBarView: CoinListNavigationBarView!
+    
+    @IBOutlet private weak var coinLabel: UILabel!
+    @IBOutlet private weak var dayLabel: UILabel!
+    @IBOutlet private weak var priceLabel: UILabel!
     
     private let viewModel: CoinListViewModel
     private let dataSource: CoinListDataSource
@@ -33,14 +38,24 @@ class CoinListViewController: UIViewController {
         tableView.register(UINib(nibName: CoinTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: CoinTableViewCell.identifier)
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
         
+        navigationBarView
+            .searchText
+            .compactMap { $0 }
+            .bind(to: viewModel.searchTextSubject)
+            .disposed(by: disposeBag)
+        
         viewModel
             .coinListDriver
             .asObservable()
-            .map({ coinsStat in
+            .map { coinsStat in
                 [SectionModel(model: "", items: coinsStat)]
-            })
+            }
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
+        
+        coinLabel.text = R.string.localizable.coinListCoinTitle()
+        dayLabel.text = R.string.localizable.coinList24hTitle()
+        priceLabel.text = R.string.localizable.coinListPriceTitle()
     }
 }
 

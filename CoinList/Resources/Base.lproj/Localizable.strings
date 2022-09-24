@@ -7,3 +7,13 @@
 */
 
 "CoinList.percentChange.text" = "%.2f%%";
+
+"CoinList.title" = "Coin List";
+
+"CoinList.currency.usd" = "USD";
+"CoinList.currency.btc" = "BTC";
+
+"CoinList.coin.title" = "Coin";
+"CoinList.24h.title" = "24h";
+"CoinList.price.title" = "Price";
+"CoinList.searchBar.placeholder" = "Search...";

@@ -3,13 +3,23 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro.ttf">
+            <string>SFPro-Semibold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CoinListViewController" customModule="CoinList" customModuleProvider="target">
             <connections>
+                <outlet property="coinLabel" destination="P9G-QF-Oy2" id="Ib6-Nf-JSI"/>
+                <outlet property="dayLabel" destination="bvV-fP-v6n" id="r4F-5z-Zgy"/>
+                <outlet property="navigationBarView" destination="3hK-ek-10x" id="N5y-nl-N8d"/>
+                <outlet property="priceLabel" destination="3lO-b5-Jtz" id="0c1-br-qrY"/>
                 <outlet property="tableView" destination="9xg-UM-4MT" id="slm-T9-IvC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,22 +30,72 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9xg-UM-4MT">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="139" width="414" height="757"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hK-ek-10x" customClass="CoinListNavigationBarView" customModule="CoinList" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GjK-wt-0US">
+                    <rect key="frame" x="0.0" y="88" width="414" height="51"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9G-QF-Oy2">
+                            <rect key="frame" x="16" y="22" width="31" height="17"/>
+                            <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="14"/>
+                            <color key="textColor" name="AbbreviationLabelText"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvV-fP-v6n">
+                            <rect key="frame" x="231" y="22" width="26.5" height="17"/>
+                            <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="14"/>
+                            <color key="textColor" name="AbbreviationLabelText"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lO-b5-Jtz">
+                            <rect key="frame" x="363.5" y="22" width="34.5" height="17"/>
+                            <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="14"/>
+                            <color key="textColor" name="CoinLabelNameText"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="P9G-QF-Oy2" secondAttribute="bottom" constant="12" id="OHl-ty-VtN"/>
+                        <constraint firstItem="P9G-QF-Oy2" firstAttribute="leading" secondItem="GjK-wt-0US" secondAttribute="leading" constant="16" id="PPn-jl-t4D"/>
+                        <constraint firstAttribute="bottom" secondItem="3lO-b5-Jtz" secondAttribute="bottom" constant="12" id="WTu-hH-ooZ"/>
+                        <constraint firstAttribute="height" constant="51" id="bbc-tG-Wez"/>
+                        <constraint firstAttribute="bottom" secondItem="bvV-fP-v6n" secondAttribute="bottom" constant="12" id="j9i-dW-ahN"/>
+                        <constraint firstAttribute="trailing" secondItem="3lO-b5-Jtz" secondAttribute="trailing" constant="16" id="mFc-f3-KqZ"/>
+                        <constraint firstItem="bvV-fP-v6n" firstAttribute="centerX" secondItem="GjK-wt-0US" secondAttribute="centerX" multiplier="1.181" id="sXF-7U-GNH"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9xg-UM-4MT" secondAttribute="bottom" id="DQ4-Wl-4W1"/>
-                <constraint firstItem="9xg-UM-4MT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="DSx-Hb-KNk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3hK-ek-10x" secondAttribute="trailing" id="2ck-io-e2z"/>
+                <constraint firstItem="9xg-UM-4MT" firstAttribute="top" secondItem="GjK-wt-0US" secondAttribute="bottom" id="77G-i3-IhZ"/>
+                <constraint firstAttribute="bottom" secondItem="9xg-UM-4MT" secondAttribute="bottom" id="DQ4-Wl-4W1"/>
+                <constraint firstItem="GjK-wt-0US" firstAttribute="top" secondItem="3hK-ek-10x" secondAttribute="bottom" id="F0m-b4-AgG"/>
+                <constraint firstItem="3hK-ek-10x" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="44" id="FtW-YH-yjl"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9xg-UM-4MT" secondAttribute="trailing" id="RRx-y6-MAB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GjK-wt-0US" secondAttribute="trailing" id="Z2X-LK-Gjn"/>
+                <constraint firstItem="3hK-ek-10x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dz8-zx-Sof"/>
                 <constraint firstItem="9xg-UM-4MT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rr2-Uk-jQp"/>
+                <constraint firstItem="GjK-wt-0US" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xoI-43-oWl"/>
+                <constraint firstItem="3hK-ek-10x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yLn-S4-a47"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="144"/>
+            <point key="canvasLocation" x="137.68115942028987" y="143.97321428571428"/>
         </view>
     </objects>
     <resources>
+        <namedColor name="AbbreviationLabelText">
+            <color red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CoinLabelNameText">
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

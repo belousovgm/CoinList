@@ -30,6 +30,7 @@ class CoinTableViewCell: UITableViewCell {
         super.prepareForReuse()
         
         iconImageView.af.cancelImageRequest()
+        imageView?.image = nil
     }
     
     func fill(with data: CellData) {
@@ -37,7 +38,7 @@ class CoinTableViewCell: UITableViewCell {
         rankLabelView.text = "\(data.rank)"
         abbreviationLabel.text = data.sybmol
         percentChangeView.setup(value: data.dayPercentChange)
-        priceLabel.text = "\(data.usdPrice)"
+        priceLabel.text = data.usdPrice.currencyUS
         
         if let url = URL(string: data.iconUrl) {
             iconImageView.af.setImage(

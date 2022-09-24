@@ -10,15 +10,23 @@ import RxSwift
 import RxCocoa
 
 class CoinListViewModel {
-    private let disposeBag = DisposeBag()
     private let coinListSubject = PublishSubject<[CoinStat]>()
+    
+    private let disposeBag = DisposeBag()
+    
     private let globalScheduler = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global())
+    
+    private let coinListApi: CoinsApi
+    
+    // Input
+    
+    let searchTextSubject = PublishSubject<String>()
+    
+    // Output
     
     var coinListDriver: Driver<[CoinStat]> {
         return coinListSubject.asDriver(onErrorJustReturn: [])
     }
-    
-    private let coinListApi: CoinsApi
     
     init(coinListApi: CoinsApi) {
         self.coinListApi = coinListApi
@@ -35,15 +43,27 @@ class CoinListViewModel {
         coinListApi
             .getCoins()
             .asObservable()
-            .flatMap { coins in
+            .flatMap { [unowned self] coins in
                 return Observable.combineLatest(
                     Observable.just(coins),
-                    intervalUpdate.startWith([])
+                    intervalUpdate.startWith([]),
+                    self.searchTextSubject.startWith("")
                 )
             }
             .observe(on: globalScheduler)
-            .map { (coins, coinUpdates) -> [CoinStat] in
-                coins.map { coin in
+            .map { (coins, coinUpdates, searchText) -> [CoinStat] in
+                let filteredCoins: [Coin]
+                if searchText.isEmpty {
+                    filteredCoins = coins
+                } else {
+                    filteredCoins = coins.filter({ coin in
+                        coin.identifier.lowercased().contains(searchText.lowercased()) ||
+                        coin.name.lowercased().contains(searchText.lowercased()) ||
+                        coin.symbol.lowercased().contains(searchText.lowercased())
+                    })
+                }
+                
+                return filteredCoins.map { coin in
                     let coinUpdate = coinUpdates.first(where: { $0.identifier == coin.identifier })
                     
                     return CoinStat(
